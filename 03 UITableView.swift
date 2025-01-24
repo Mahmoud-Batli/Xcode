@@ -34,4 +34,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print("FavButton \(sender.tag)")
         sender.setImage(UIImage(systemName: "heart.fill"), for: .normal)
     }
+        func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        arrNames.swapAt(sourceIndexPath.row, destinationIndexPath.row)
+    }//دالتين لتفعيل التنقل بين سطور الجدول
+        func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completion) in
+            self.arrNames.remove(at: indexPath.row)
+            tableView.beginUpdates()
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            tableView.endUpdates()
+            completion(true)
+            //تفعيل سواب واضافة الازرار
+        }
+        let favoriteAction = UIContextualAction(style: .normal, title: "Favorite") { (_, _, _) in
+            
+        }
+        favoriteAction.image =  UIImage(systemName: "heart")
+        deleteAction.image = UIImage(systemName: "trash")
+        return UISwipeActionsConfiguration(actions: [deleteAction, favoriteAction]
 }
