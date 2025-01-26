@@ -50,10 +50,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             //تفعيل سواب واضافة الازرار
         }
         let favoriteAction = UIContextualAction(style: .normal, title: "Favorite") { (_, _, _) in
+        {
 
         favoriteAction.image =  UIImage(systemName: "heart")
         deleteAction.image = UIImage(systemName: "trash")
         return UISwipeActionsConfiguration(actions: [deleteAction, favoriteAction]
-        }
+                                          }
 
 }
