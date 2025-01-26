@@ -40,7 +40,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         arrNames.swapAt(sourceIndexPath.row, destinationIndexPath.row)
     }//دالتين لتفعيل التنقل بين سطور الجدول
-        func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completion) in
             self.arrNames.remove(at: indexPath.row)
             tableView.beginUpdates()
@@ -55,6 +55,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         favoriteAction.image =  UIImage(systemName: "heart")
         deleteAction.image = UIImage(systemName: "trash")
         return UISwipeActionsConfiguration(actions: [deleteAction, favoriteAction]
-                                          }
-
+        }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return arrSections.count
+        //عدد السيكشن
+    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return arrSections[section]
+        //هيدر الجدول
+    }
+    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return "\(arrSections[section]) Footer"
+        //فوتر الجدول
+    }
 }
