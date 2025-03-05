@@ -16,6 +16,10 @@
 		CE08FDBF2D7206D9009FE65C /* Passing_DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE08FDBE2D7206D9009FE65C /* Passing_DataTests.swift */; };
 		CE08FDC92D7206DA009FE65C /* Passing_DataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE08FDC82D7206DA009FE65C /* Passing_DataUITests.swift */; };
 		CE08FDCB2D7206DA009FE65C /* Passing_DataUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE08FDCA2D7206DA009FE65C /* Passing_DataUITestsLaunchTests.swift */; };
+		CE76DC642D786BDF002869DA /* Properties.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE76DC632D786BDF002869DA /* Properties.storyboard */; };
+		CE76DC662D786C4E002869DA /* Segue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE76DC652D786C4E002869DA /* Segue.storyboard */; };
+		CE76DC682D786C9E002869DA /* Protocol&Delegate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE76DC672D786C9E002869DA /* Protocol&Delegate.storyboard */; };
+		CE76DC6A2D786CD7002869DA /* NotificationCenter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE76DC692D786CD7002869DA /* NotificationCenter.storyboard */; };
 		CEA630202D7476E20047D5DD /* FristTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6301F2D7476E10047D5DD /* FristTabVC.swift */; };
 		CEA630222D7476F90047D5DD /* SecondTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA630212D7476F90047D5DD /* SecondTabVC.swift */; };
 		CEA630242D74770F0047D5DD /* ThirdTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA630232D74770F0047D5DD /* ThirdTabVC.swift */; };
@@ -60,6 +64,10 @@
 		CE08FDC42D7206DA009FE65C /* Passing DataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Passing DataUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE08FDC82D7206DA009FE65C /* Passing_DataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passing_DataUITests.swift; sourceTree = "<group>"; };
 		CE08FDCA2D7206DA009FE65C /* Passing_DataUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passing_DataUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE76DC632D786BDF002869DA /* Properties.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Properties.storyboard; sourceTree = "<group>"; };
+		CE76DC652D786C4E002869DA /* Segue.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Segue.storyboard; sourceTree = "<group>"; };
+		CE76DC672D786C9E002869DA /* Protocol&Delegate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Protocol&Delegate.storyboard"; sourceTree = "<group>"; };
+		CE76DC692D786CD7002869DA /* NotificationCenter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotificationCenter.storyboard; sourceTree = "<group>"; };
 		CEA6301F2D7476E10047D5DD /* FristTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FristTabVC.swift; sourceTree = "<group>"; };
 		CEA630212D7476F90047D5DD /* SecondTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTabVC.swift; sourceTree = "<group>"; };
 		CEA630232D74770F0047D5DD /* ThirdTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdTabVC.swift; sourceTree = "<group>"; };
@@ -121,6 +129,7 @@
 		CE08FDA62D7206D3009FE65C /* Passing Data */ = {
 			isa = PBXGroup;
 			children = (
+				CE76DC622D786BA7002869DA /* Views */,
 				CE08FDA72D7206D3009FE65C /* AppDelegate.swift */,
 				CE08FDA92D7206D3009FE65C /* SceneDelegate.swift */,
 				CE08FDAB2D7206D3009FE65C /* ViewController.swift */,
@@ -158,6 +167,17 @@
 				CE08FDCA2D7206DA009FE65C /* Passing_DataUITestsLaunchTests.swift */,
 			);
 			path = "Passing DataUITests";
+			sourceTree = "<group>";
+		};
+		CE76DC622D786BA7002869DA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE76DC632D786BDF002869DA /* Properties.storyboard */,
+				CE76DC652D786C4E002869DA /* Segue.storyboard */,
+				CE76DC672D786C9E002869DA /* Protocol&Delegate.storyboard */,
+				CE76DC692D786CD7002869DA /* NotificationCenter.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,8 +284,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE76DC6A2D786CD7002869DA /* NotificationCenter.storyboard in Resources */,
 				CE08FDB42D7206D9009FE65C /* LaunchScreen.storyboard in Resources */,
+				CE76DC642D786BDF002869DA /* Properties.storyboard in Resources */,
+				CE76DC682D786C9E002869DA /* Protocol&Delegate.storyboard in Resources */,
 				CE08FDB12D7206D9009FE65C /* Assets.xcassets in Resources */,
+				CE76DC662D786C4E002869DA /* Segue.storyboard in Resources */,
 				CE08FDAF2D7206D3009FE65C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

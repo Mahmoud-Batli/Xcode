@@ -18,9 +18,16 @@ class ViewController: UIViewController {
     @IBAction func btnSend(_ sender: Any) {
         let vcPass = storyboard?.instantiateViewController(withIdentifier: "passID") as! PassViewController
         vcPass.data = User(name: "Mahmoud", age: 30, email: "m@m.m")
-        navigationController?.pushViewController(vcPass, animated: true)
+//        navigationController?.pushViewController(vcPass, animated: true)
+        
+        let vcPass2 = storyboard?.instantiateViewController(withIdentifier: "passID") as! PassViewController
+        vcPass2.data2 = textLbl.text
+        navigationController?.pushViewController(vcPass2, animated: true)
+
+        
 //        vcPass.modalPresentationStyle = .fullScreen
 //        present(vcPass, animated: true)
+ 
         
     }
 }
