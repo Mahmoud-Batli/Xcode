@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C8186752DCBF92D00B3364B /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8186742DCBF92D00B3364B /* PickerViewController.swift */; };
 		CEAF7E242D79C72C001E2E5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF7E232D79C72C001E2E5F /* AppDelegate.swift */; };
 		CEAF7E262D79C72C001E2E5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF7E252D79C72C001E2E5F /* SceneDelegate.swift */; };
 		CEAF7E282D79C72C001E2E5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAF7E272D79C72C001E2E5F /* ViewController.swift */; };
@@ -37,7 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5C8186742DCBF92D00B3364B /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		CEAF7E202D79C72C001E2E5F /* UIs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAF7E232D79C72C001E2E5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEAF7E252D79C72C001E2E5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 				CEAF7E2C2D79C732001E2E5F /* Assets.xcassets */,
 				CEAF7E2E2D79C732001E2E5F /* LaunchScreen.storyboard */,
 				CEAF7E312D79C732001E2E5F /* Info.plist */,
-				5C8186742DCBF92D00B3364B /* PickerViewController.swift */,
 			);
 			path = UIs;
 			sourceTree = "<group>";
@@ -263,7 +260,6 @@
 			files = (
 				CEAF7E282D79C72C001E2E5F /* ViewController.swift in Sources */,
 				CEAF7E242D79C72C001E2E5F /* AppDelegate.swift in Sources */,
-				5C8186752DCBF92D00B3364B /* PickerViewController.swift in Sources */,
 				CEAF7E262D79C72C001E2E5F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
