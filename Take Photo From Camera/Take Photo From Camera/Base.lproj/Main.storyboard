@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fuv-zh-Nsu">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Take_Photo_From_Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ufa-Yw-gas">
+                                <rect key="frame" x="16" y="59" width="361" height="688.66666666666663"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rp3-ls-8IG">
+                                <rect key="frame" x="16" y="783.66666666666663" width="361" height="34.333333333333371"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Take Photo">
+                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnTakePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X5S-fI-nXw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rp3-ls-8IG" secondAttribute="trailing" constant="16" id="06K-Nb-vVC"/>
+                            <constraint firstItem="Rp3-ls-8IG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7qK-aM-BYq"/>
+                            <constraint firstItem="Rp3-ls-8IG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="CcS-Ik-VF5"/>
+                            <constraint firstItem="Rp3-ls-8IG" firstAttribute="top" secondItem="ufa-Yw-gas" secondAttribute="bottom" constant="36" id="Mf8-R0-xL1"/>
+                            <constraint firstItem="ufa-Yw-gas" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="YPl-vP-IBF"/>
+                            <constraint firstItem="Rp3-ls-8IG" firstAttribute="top" secondItem="ufa-Yw-gas" secondAttribute="bottom" constant="36" id="hiY-lc-eZf"/>
+                            <constraint firstItem="ufa-Yw-gas" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qUk-AW-zyT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ufa-Yw-gas" secondAttribute="trailing" constant="16" id="ror-Fr-yJC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="ufa-Yw-gas" id="50g-CL-KhE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="4.9295774647887329"/>
+        </scene>
+        <!--PickerVC-->
+        <scene sceneID="GSb-0w-IeD">
+            <objects>
+                <viewController id="Fuv-zh-Nsu" customClass="PHPickerVC" customModule="Take_Photo_From_Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XI9-NS-QjB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2qh-Rm-xKy">
+                                <rect key="frame" x="8" y="59" width="377" height="717"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="photoCell" rowHeight="138" id="1I5-ul-k8D" customClass="PHPickerTableViewCell" customModule="Take_Photo_From_Camera" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="377" height="138"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1I5-ul-k8D" id="2ns-W7-q9F">
+                                            <rect key="frame" x="0.0" y="0.0" width="377" height="138"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wcr-KO-0G1">
+                                                    <rect key="frame" x="0.0" y="0.0" width="377" height="138"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="K6t-yB-Efo"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Wcr-KO-0G1" secondAttribute="bottom" id="OGT-q9-c73"/>
+                                                <constraint firstItem="Wcr-KO-0G1" firstAttribute="leading" secondItem="2ns-W7-q9F" secondAttribute="leading" id="mdC-WA-kUZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="Wcr-KO-0G1" secondAttribute="trailing" id="sKp-DL-zfq"/>
+                                                <constraint firstItem="Wcr-KO-0G1" firstAttribute="top" secondItem="2ns-W7-q9F" secondAttribute="top" id="taI-M1-gs1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgView" destination="Wcr-KO-0G1" id="7z1-pQ-SVc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmI-me-6bH">
+                                <rect key="frame" x="8" y="784" width="377" height="34"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Get Photos">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnGetPhoto:" destination="Fuv-zh-Nsu" eventType="touchUpInside" id="x7X-nw-0eS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3FC-FQ-Gt2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QmI-me-6bH" firstAttribute="bottom" secondItem="3FC-FQ-Gt2" secondAttribute="bottom" id="7II-QK-EOl"/>
+                            <constraint firstItem="2qh-Rm-xKy" firstAttribute="top" secondItem="3FC-FQ-Gt2" secondAttribute="top" id="8XA-hS-ITr"/>
+                            <constraint firstItem="3FC-FQ-Gt2" firstAttribute="trailing" secondItem="QmI-me-6bH" secondAttribute="trailing" constant="8" id="QaH-W0-EB9"/>
+                            <constraint firstItem="QmI-me-6bH" firstAttribute="leading" secondItem="3FC-FQ-Gt2" secondAttribute="leading" constant="8" id="bPE-Em-6Dx"/>
+                            <constraint firstItem="2qh-Rm-xKy" firstAttribute="leading" secondItem="3FC-FQ-Gt2" secondAttribute="leading" constant="8" id="g9F-nE-KDK"/>
+                            <constraint firstItem="QmI-me-6bH" firstAttribute="top" secondItem="2qh-Rm-xKy" secondAttribute="bottom" constant="8" symbolic="YES" id="ngf-Zu-Odv"/>
+                            <constraint firstItem="3FC-FQ-Gt2" firstAttribute="trailing" secondItem="2qh-Rm-xKy" secondAttribute="trailing" constant="8" id="nlL-p2-zH1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="2qh-Rm-xKy" id="pfq-M9-QZ7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ScF-yG-O3a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1226.7175572519084" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
